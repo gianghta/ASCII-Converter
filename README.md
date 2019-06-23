@@ -12,7 +12,7 @@ Convert images into text based art(ASCII)
 * **>=python 3.7**
 * **PIL**
 
-## Future update
-* Invert brightness
-* Command line interactions
-* Support gif/animated
+## To Do
+- [ ] Invert brightness
+- [ ] Command line interactions
+- [ ] Support gif/animated
