@@ -14,5 +14,5 @@ Convert images into text based art(ASCII)
 
 ## To Do
 - [ ] Invert brightness
-- [ ] Command line interactions
+- [ ] CLI Commands
 - [ ] Support gif/animated
