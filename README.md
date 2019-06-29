@@ -1,18 +1,18 @@
 ﻿# ASCII-Converter
 Convert images into text based art(ASCII)
 
-# Example
+## Example
 ![original image](https://github.com/gianghta/ASCII-Converter/blob/master/jotaro.jpg)
 ![example](https://github.com/gianghta/ASCII-Converter/blob/master/ascii-project.PNG)
 
-# Author
+## Author
 * Giang Ta
 
-# Requirements
+## Requirements
 * **>=python 3.7**
 * **PIL**
 
-# Future update
-* Invert brightness
-* Command line interactions
-* Support gif/animated
+## To Do
+- [ ] Invert brightness
+- [ ] CLI Commands
+- [ ] Support gif/animated
