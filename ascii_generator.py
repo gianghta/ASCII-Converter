@@ -1,5 +1,6 @@
 from PIL import Image
 import os
+import argparse
 
 ASCII_CHARS = ['.',',',':',';','+','*','?','%','S','#','@']
 
@@ -50,3 +51,31 @@ def print_matrix(input_matrix):
     for row in input_matrix:
         line = [px*5 for px in row]
         print("".join(line))
+
+def parse_handler():
+    parser = argparse.ArgumentParser(prog="Image to ASCII art")
+    parser.add_argument("inputFile", type=str, help="the name of the image file")
+    parser.add_argument('-o', "--output", type=str, default="output.txt", help="output file path to print out ascii art")
+    parser.add_argument("--size", type=int, help="size of the output ascii art")
+    args = parser.parse_args()
+    return args
+
+def main(command):
+    file_path = os.path.abspath(command.inputFile)
+    
+    img = Image.open(file_path)
+
+    img = resize(img, command.size)
+
+    pixles_matrix = convert_to_pixel(img)
+    gs_matrix = convert_to_grayscale(pixles_matrix)
+
+    ascii_matrix = convert_to_ascii(gs_matrix, ASCII_CHARS)
+    print_matrix(ascii_matrix)
+
+if __name__ == "__main__":
+    command = parse_handler()
+    main(command)
+
+
+
